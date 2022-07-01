@@ -8,7 +8,7 @@
 
 .app {
   padding: 150px;
-  @include flex(column, center, center, 40px);
+  @include flex(column, center, center, 80px);
   .landing {
     position: relative;
     .header {
@@ -74,7 +74,7 @@
         height: 350px;
       }
     }
-    @include flex(column, center, center, 20px);
+    @include flex(column, center, center, 40px);
     @media screen and (min-width: 768px) and (max-width: 1024px) {
       .list {
         @include flex(row, center, center, 20px);
@@ -88,7 +88,7 @@
     }
   }
   .testimonials {
-    @include flex(column, flex-start, center, 20px);
+    @include flex(column, flex-start, center, 40px);
     width: 100%;
     #testimonials {
       width: 350px;
