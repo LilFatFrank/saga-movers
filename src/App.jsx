@@ -79,6 +79,10 @@ const App = () => {
             <img src="Check.png" alt="Check" />
           </div>
           <div className="detail">
+            <span id="text" style={{ textAlign: "right" }}>
+              6 Ken Browne drive, Te rapa 3200 <br />
+              Hamilton, New Zealand
+            </span>
             <img src="Location.png" alt="Location" />
           </div>
           <div className="detail">
