@@ -1,11 +1,17 @@
 import { Button } from "@mui/material";
 import "./styles/app.scss";
+import { motion } from "framer-motion";
 
 const App = () => {
   return (
     <div className="app">
       <div className="landing">
-        <div className="header">
+        <motion.div
+          className="header"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
           <div className="logo-area">
             <img src="SAGA.png" alt="Logo" id="logo" />
             <h2 style={{ position: "relative" }}>
@@ -27,14 +33,42 @@ const App = () => {
           >
             Book Now
           </Button>
-        </div>
-        <img src="landing.png" alt="landing" id="landing-img" />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5, delay: 0.5 }}
+        >
+          <img src="landing.png" alt="landing" id="landing-img" />
+        </motion.div>
       </div>
       <div className="principles">
         <div className="list">
-          <img src="Trust.png" alt="Trust" />
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: 1,
+              type: "spring",
+              bounce: 0.5,
+              delay: 0.3,
+            }}
+          >
+            <img src="Trust.png" alt="Trust" />
+          </motion.div>
           <img src="Efficiency.png" alt="Efficiency" />
-          <img src="Support.png" alt="Support" />
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: 1,
+              type: "spring",
+              bounce: 0.5,
+              delay: 0.3,
+            }}
+          >
+            <img src="Support.png" alt="Support" />
+          </motion.div>
         </div>
         <Button
           variant="contained"
