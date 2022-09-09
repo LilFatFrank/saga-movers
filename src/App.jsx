@@ -14,10 +14,10 @@ const App = () => {
         >
           <div className="logo-area">
             <img src="SAGA.png" alt="Logo" id="logo" />
-            <h2 style={{ position: "relative" }}>
+            <h2 style={{ position: "relative", color: "#ffffff" }}>
               New Zealand’s most trusted
               <br />
-              <span style={{ color: "#6349ff" }}>moving specialists</span>
+              <span style={{ color: "#ffffff" }}>moving specialists</span>
               <img src="underline.svg" alt="underline" id="svg" />
             </h2>
           </div>
@@ -30,17 +30,37 @@ const App = () => {
                 "noopener"
               )
             }
+            style={{
+              backgroundColor: "#fff",
+              color: "#3D3D3D",
+              fontWeight: "bold",
+              font: "Termina",
+            }}
           >
             Book Now
           </Button>
         </motion.div>
-        <motion.div
+        {/* <motion.div
+          className="image-area"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, delay: 0.5 }}
+          style={{
+            position: "absolute",
+            bottom: "0",
+            left: "0",
+            width: "100%",
+            zIndex: "-1",
+          }}
         >
-          <img src="landing.png" alt="landing" id="landing-img" />
-        </motion.div>
+          <img
+            src="landing.png"
+            alt="landing"
+            id="landing-img"
+            width="auto"
+            height="100%"
+          />
+        </motion.div> */}
       </div>
       <div className="principles">
         <div className="list">
