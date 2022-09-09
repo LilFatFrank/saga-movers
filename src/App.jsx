@@ -1,17 +1,23 @@
 import { Button } from "@mui/material";
 import "./styles/app.scss";
+import { motion } from "framer-motion";
 
 const App = () => {
   return (
     <div className="app">
       <div className="landing">
-        <div className="header">
+        <motion.div
+          className="header"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
           <div className="logo-area">
             <img src="SAGA.png" alt="Logo" id="logo" />
-            <h2 style={{ position: "relative" }}>
+            <h2 style={{ position: "relative", color: "#ffffff" }}>
               New Zealand’s most trusted
               <br />
-              <span style={{ color: "#6349ff" }}>moving specialists</span>
+              <span style={{ color: "#ffffff" }}>moving specialists</span>
               <img src="underline.svg" alt="underline" id="svg" />
             </h2>
           </div>
@@ -24,17 +30,65 @@ const App = () => {
                 "noopener"
               )
             }
+            style={{
+              backgroundColor: "#fff",
+              color: "#3D3D3D",
+              fontWeight: "bold",
+              font: "Termina",
+            }}
           >
             Book Now
           </Button>
-        </div>
-        <img src="landing.png" alt="landing" id="landing-img" />
+        </motion.div>
+        {/* <motion.div
+          className="image-area"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5, delay: 0.5 }}
+          style={{
+            position: "absolute",
+            bottom: "0",
+            left: "0",
+            width: "100%",
+            zIndex: "-1",
+          }}
+        >
+          <img
+            src="landing.png"
+            alt="landing"
+            id="landing-img"
+            width="auto"
+            height="100%"
+          />
+        </motion.div> */}
       </div>
       <div className="principles">
         <div className="list">
-          <img src="Trust.png" alt="Trust" />
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: 1,
+              type: "spring",
+              bounce: 0.5,
+              delay: 0.3,
+            }}
+          >
+            <img src="Trust.png" alt="Trust" />
+          </motion.div>
           <img src="Efficiency.png" alt="Efficiency" />
-          <img src="Support.png" alt="Support" />
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: 1,
+              type: "spring",
+              bounce: 0.5,
+              delay: 0.3,
+            }}
+          >
+            <img src="Support.png" alt="Support" />
+          </motion.div>
         </div>
         <Button
           variant="contained"
@@ -79,6 +133,10 @@ const App = () => {
             <img src="Check.png" alt="Check" />
           </div>
           <div className="detail">
+            <span id="text" style={{ textAlign: "right" }}>
+              6 Ken Browne drive, Te rapa 3200 <br />
+              Hamilton, New Zealand
+            </span>
             <img src="Location.png" alt="Location" />
           </div>
           <div className="detail">
