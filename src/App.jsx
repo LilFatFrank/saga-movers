@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Button, withTheme } from "@mui/material";
 import "./styles/app.scss";
 import { motion } from "framer-motion";
 
@@ -14,82 +14,25 @@ const App = () => {
         >
           <div className="logo-area">
             <img src="SAGA.png" alt="Logo" id="logo" />
-            <h2 style={{ position: "relative", color: "#ffffff" }}>
-              New Zealand’s most trusted
-              <br />
-              <span style={{ color: "#ffffff" }}>moving specialists</span>
-              <img src="underline.svg" alt="underline" id="svg" />
-            </h2>
+            <div className="logo-text">
+              <h2 style={{ position: "relative", color: "#3D3D3D" }}>
+                New Zealand’s most trusted
+                <br />
+                <span style={{ color: "#3D3D3D" }}>moving specialists</span>
+                {/* <img src="underline.svg" alt="underline" id="svg" /> */}
+              </h2>
+            </div>
           </div>
-          <Button
-            variant="contained"
-            onClick={() =>
-              window.open(
-                "https://www.facebook.com/Sagamovingspecialists/",
-                "_blank",
-                "noopener"
-              )
-            }
-            style={{
-              backgroundColor: "#fff",
-              color: "#3D3D3D",
-              fontWeight: "bold",
-              font: "Termina",
-            }}
-          >
-            Book Now
-          </Button>
         </motion.div>
-        {/* <motion.div
-          className="image-area"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5, delay: 0.5 }}
-          style={{
-            position: "absolute",
-            bottom: "0",
-            left: "0",
-            width: "100%",
-            zIndex: "-1",
-          }}
-        >
-          <img
-            src="landing.png"
-            alt="landing"
-            id="landing-img"
-            width="auto"
-            height="100%"
-          />
-        </motion.div> */}
       </div>
-      <div className="principles">
-        <div className="list">
-          <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{
-              duration: 1,
-              type: "spring",
-              bounce: 0.5,
-              delay: 0.3,
-            }}
-          >
-            <img src="Trust.png" alt="Trust" />
-          </motion.div>
-          <img src="Efficiency.png" alt="Efficiency" />
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{
-              duration: 1,
-              type: "spring",
-              bounce: 0.5,
-              delay: 0.3,
-            }}
-          >
-            <img src="Support.png" alt="Support" />
-          </motion.div>
-        </div>
+      <div className="about-us">
+        <img src="about.png" alt="about" id="about" />
+        <p>
+          At SAGA, we take pride in being the most efficient movers and packers
+          in New Zealand.
+          <br /> With a fleet of over a dozen vehicles, we’re helped countless
+          families across NZ move successfully.
+        </p>
         <Button
           variant="contained"
           onClick={() =>
@@ -103,33 +46,111 @@ const App = () => {
           Book Now
         </Button>
       </div>
-      <div className="testimonials">
-        <img src="Testimonials.png" alt="testimonials" id="testimonials" />
-        <div className="list">
-          <img src="Joshika.png" alt="Joshika" />
-          <img src="Courteney.png" alt="Courteney" />
-          <img src="Jo.png" alt="Jo" />
-          <img src="You.png" alt="You" />
-          <Button
-            variant="contained"
-            onClick={() =>
-              window.open(
-                "https://www.facebook.com/Sagamovingspecialists/",
-                "_blank",
-                "noopener"
-              )
-            }
+      <div>
+        <video autoPlay loop muted width="100%" height="auto">
+          <source src="saga-video.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div className="about-us">
+        <img src="services.png" alt="about" id="about" />
+        <div className="services-container">
+          <img
+            src="services1.png"
+            alt="services"
+            id="services"
+            className="item"
+          />
+          <div className="item">
+            <h3>Furniture Moving</h3>
+            <p>
+              Moving into a new place? Want your goods moved safely and
+              efficiently? We have helped countless home owners relocate
+              reliably.
+            </p>
+            <a
+              href="https://www.facebook.com/Sagamovingspecialists/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read More &nbsp;&nbsp;&nbsp;
+              <img src="arrow.png" alt="arrow" width="auto" height="15px" />
+            </a>
+          </div>
+          <div className="item">
+            <h3>Timely Services</h3>
+            <p>
+              With a fleet of over a dozen trucks, we are reliable, on-time, and
+              customer friendly. Need last minute changes, we got you!
+            </p>
+            <a
+              href="https://www.facebook.com/Sagamovingspecialists/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read More &nbsp;&nbsp;&nbsp;
+              <img src="arrow.png" alt="arrow" width="auto" height="15px" />
+            </a>
+          </div>
+          <img
+            src="services2.png"
+            alt="services"
+            id="services"
+            className="item"
+          />
+        </div>
+      </div>
+      <div className="about-us">
+        <img src="gallery.png" alt="about" id="about" />
+        <img
+          src="gallery-content.jpeg"
+          alt="gallery"
+          id="gallery"
+          width="100%"
+          height="auto"
+        />
+        <div className="link">
+          <a
+            href="https://www.facebook.com/Sagamovingspecialists/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Book Now
-          </Button>
+            <div className="link-div">&nbsp;</div>
+          </a>
         </div>
       </div>
       <div className="port">
-        <img src="Port.png" alt="port" id="port" />
+        <div className="port-image-container">
+          <img
+            src="connect-img.png"
+            alt="contact"
+            id="contact"
+            width="100%"
+            height="auto"
+          />
+          <div className="port-text">
+            <h2>Connnect With Us</h2>
+            <p>
+              Reach out for a quick moving service. <br /> We don't disappoint.
+            </p>
+            <span>
+              <a
+                href="https://www.facebook.com/Sagamovingspecialists/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="fb.png" alt="fb" id="fb" width="auto" height="40px" />
+              </a>
+              <label>© All Rights Reserved</label>
+            </span>
+          </div>
+        </div>
         <div className="details">
-          <img src="letsport.png" alt="Let's Port" id="letsport" />
-          <div className="detail">
-            <span id="saga">Saga Moving Specialists</span>
+          <span className="triangle">
+            <img src="triangle.png" alt="triangle" id="triangle" />
+            <h3 style={{ fontSize: "2rem" }}>Ready to Move?</h3>
+          </span>
+          <div className="detail-title">
+            <span id="saga">SAGA Moving Specialists</span>
             <img src="Check.png" alt="Check" />
           </div>
           <div className="detail">
@@ -153,11 +174,11 @@ const App = () => {
             </a>
             <img src="Mail.png" alt="mail" />
           </div>
-          <div className="detail">
+          <div className="detail" style={{ border: "none" }}>
             <span
               style={{
                 paddingRight: "20px",
-                borderRight: "1px solid #3d3d3d",
+                borderRight: "1px solid #ffffff66",
                 display: "flex",
                 alignItems: "center",
                 gap: "5px",
@@ -170,6 +191,11 @@ const App = () => {
             <span style={{ paddingLeft: "20px" }}>
               <Button
                 variant="contained"
+                style={{
+                  background: "white",
+                  color: "#3D3D3D",
+                  fontSize: "0.8rem",
+                }}
                 onClick={() =>
                   window.open(
                     "https://www.facebook.com/Sagamovingspecialists/",
@@ -182,9 +208,9 @@ const App = () => {
               </Button>
             </span>
           </div>
+          <img src="hex.png" alt="hex" id="hex" />
         </div>
       </div>
-      <label>© All Rights Reserved</label>
     </div>
   );
 };
