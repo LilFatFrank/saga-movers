@@ -46,7 +46,7 @@ const App = () => {
           Book Now
         </Button>
       </div>
-      <div>
+      <div style={{ width: "100%", height: "auto" }}>
         <video autoPlay loop muted width="100%" height="auto">
           <source src="saga-video.mp4" type="video/mp4" />
         </video>
@@ -194,7 +194,8 @@ const App = () => {
                 style={{
                   background: "white",
                   color: "#3D3D3D",
-                  fontSize: "0.8rem",
+                  fontWeight: "600",
+                  fontSize: "1rem",
                 }}
                 onClick={() =>
                   window.open(
