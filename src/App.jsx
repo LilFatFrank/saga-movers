@@ -49,6 +49,8 @@ const App = () => {
       <div style={{ width: "100%", height: "auto" }}>
         <video autoPlay loop muted width="100%" height="auto">
           <source src="saga-video.mp4" type="video/mp4" />
+          <source src="saga-video.ogg" type="video/ogg" />
+          Your browser does not support the video tag.
         </video>
       </div>
       <div className="about-us">
