@@ -102,7 +102,7 @@ const App = () => {
       <div className="about-us">
         <img src="gallery.png" alt="about" id="about" />
         <img
-          src="gallery-content.jpeg"
+          src="gallery-content.png"
           alt="gallery"
           id="gallery"
           width="100%"

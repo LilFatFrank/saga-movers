@@ -7,7 +7,6 @@
 }
 
 .app {
-  font-family: "PT Sans", sans-serif;
   // padding-inline: 150px;
   @include flex(column, center, center, 80px);
   @media screen and (min-width: 768px) {
@@ -135,8 +134,9 @@
     flex-wrap: wrap;
     h3 {
       font-weight: 400;
-      font-size: 1.6rem;
+      font-size: 2rem;
       color: #111151;
+      padding-bottom: 1rem;
     }
     .item {
       width: 30vw;
